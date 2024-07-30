@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
 }
 
 header {
@@ -15,7 +15,7 @@ header {
 
 .logo {
     width: 250px;
-height:auto;
+    height: auto;
 }
 
 header h1 {
@@ -34,13 +34,12 @@ header h1 {
 .search-container input {
     flex-grow: 1;
     padding: 10px;
-    border: 0px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 15px 0px 0px 15px;
 }
 
 .search-container .search-button {
-
-    border: 0px solid #fff;
+    border: 1px solid #ccc;
     border-left: none;
     padding: 8px;
     border-radius: 0px 15px 15px 0px;
@@ -57,11 +56,11 @@ header h1 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #f0e8e1; /* White background for the categories */
+    background-color: #f0e8e1;
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 40px);
+    flex: 1 1 calc(25% - 20px);
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -86,14 +85,27 @@ header h1 {
     transform: scale(1.05);
 }
 
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 calc(50% - 20px); /* 2 categories per row */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        flex: 1 1 calc(100% - 20px); /* 1 category per row */
+        flex: 1 1 calc(100% - 20px);
     }
+}
+
+.no-results {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: red;
 }
