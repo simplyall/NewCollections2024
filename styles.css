@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0e8e1; /* Light beige background */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.search-bar {
+
+    padding: 12px 40px 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.search-btn {
+    position: absolute;
+    right: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    background-color: #f0e8e1; /* Light beige background */
+}
+
+.product-category {
+    display: inline-block;
+    width: calc(33% - 40px);
+    margin: 10px;
+    background-color: #fff; /* White background for category containers */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-category img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-category p {
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+.product-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .product-category {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-category {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+}
